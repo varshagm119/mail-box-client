@@ -1,0 +1,33 @@
+.container {
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.switchCon button {
+ border: none;
+ color: blue;
+ padding: 0;
+ background: none;
+}
+
+.auth{
+    margin: 3rem auto;
+    margin-top: 8ch;
+    border-radius: 6px;
+    background-color: rgba(127, 187, 255,0.5);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 30rem;
+}
