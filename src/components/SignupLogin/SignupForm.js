@@ -8,11 +8,14 @@ const SignupForm = () => {
   const confirmPasswordRef = useRef();
 
   const submitHandler = async (e) => {
+    e.preventDefault();
+    console.log('Hi')
     const enteredEmail = emailRef.current.value;
     const enteredPassword = passwordRef.current.value;
     const enteredConfirmPassword = confirmPasswordRef.current.value;
     if (enteredPassword !== enteredConfirmPassword) {
       alert("Entered password and confirm password are not same !");
+      return;
     }
 
     try {
@@ -26,18 +29,19 @@ const SignupForm = () => {
             returnSecureToken: true,
           }),
           headers: {
-            'Content-Type': 'Application/json'
+            "content-type": "application/json",
           }
+        });
+        if (!res.ok) {
+          throw new Error('Sign up failed.');
         }
-      );
-      if(!res.ok){
-        throw new Error('Sign in failed.')
-      }
+  
       const data = await res.json();
+      console.log(data)
     } catch (e) {
-      alert(e);
+      alert(e.message);
     }
-    formRef.current.reset();
+    //formRef.current.reset();
   };
 
   return (
@@ -71,7 +75,7 @@ const SignupForm = () => {
           />
         </Form.Group>
 
-        <Button type="submit" onSubmit={submitHandler}>
+        <Button type="submit" onClick={submitHandler}>
           Sign up
         </Button>
       </Form>
