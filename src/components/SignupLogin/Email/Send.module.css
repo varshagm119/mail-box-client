@@ -1,0 +1,26 @@
+.body {
+  font-family: Arial, sans-serif;
+  /* margin: auto; */
+  /* margin-top: 3%; */
+  max-width: 100%;
+  max-height: 100%;
+  padding: 3rem;
+  background-color: rgb(105, 103, 103);
+ 
+}
+
+.inputWithBorderBottom {
+  width: 94%;
+  border: none;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.editor{
+    min-height: 200px;
+    border: 1px solid #777;
+    border-radius: 10px;
+    margin-top: 15px;
+    max-height: fit-content;
+    background-color: white;
+}

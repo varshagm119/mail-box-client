@@ -3,7 +3,8 @@ import classes from './Welcome.module.css';
 import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { authActions } from '../../store/auth-slice';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Send from './Email/Send';
 
 const Welcome = () => {
     const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const Welcome = () => {
         <div className={classes.main}>
             <div className={classes.header}>
                 <div>Welcome to Mail box</div>
+                <Link to='/send' style={{textDecoration: "none"}}>Compose Email</Link>
                 <Button variant='danger' onClick={logoutHandler}>Log out</Button>
             </div>
         </div>
