@@ -23,6 +23,9 @@ const Welcome = () => {
           <Link to="/send" style={{ textDecoration: "none" }}>
             Compose Email
           </Link>
+          <Link to="/sentbox" style={{ textDecoration: "none" }}>
+            Sent Mails
+          </Link>
           <Button variant="danger" onClick={logoutHandler}>
             Log out
           </Button>

@@ -30,13 +30,15 @@ const Inbox = () => {
       );
 
       const data = await response.data;
-
-      const mailData1 = Object.entries(data).map(([key, value]) => ({
-        id: key,
-        ...value,
-      }));
-      const mailData = mailData1.reverse();
-      dispatch(mailActions.updateInbox(mailData));
+        if(data){
+          const mailData1 = Object.entries(data).map(([key, value]) => ({
+            id: key,
+            ...value,
+          }));
+          const mailData = mailData1.reverse();
+          dispatch(mailActions.updateInbox(mailData));
+        }
+      
     };
     fetchData();
   }, [reRender]);
@@ -48,6 +50,7 @@ const Inbox = () => {
         <div className={classes.row}>
           {mailInbox.map((item) => (
             <div className={classes.row1} key={item.id}>
+              {item.id && <div className={classes.dot}></div>}
               <div className={classes.user}> From: {item.sender} </div>
               <div className={classes.subject}> Sub: {item.subject} </div>
               <div className={classes.msg}>

@@ -65,6 +65,7 @@ const Send = () => {
           sender: sender,
           subject: subject,
           message: editorState.getCurrentContent().getPlainText(),
+          dot: true
         }),
         headers: {
           "Content-type": "application/json",

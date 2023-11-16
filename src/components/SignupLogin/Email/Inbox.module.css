@@ -39,10 +39,18 @@
   text-align: right;
 }
 
-.delete{
+.dot {
+  width: 8px;
+  height: 8px;
+  background: blue;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+
+.delete {
   margin-left: 20px;
 }
-.delete button{
+.delete button {
   border: 1 px solid red;
   background: transparent;
   color: rgb(88, 46, 46);
