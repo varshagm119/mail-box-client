@@ -1,13 +1,26 @@
 .body {
   font-family: Arial, sans-serif;
-  /* margin: auto; */
-  /* margin-top: 3%; */
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: 0;
+  
   max-width: 100%;
   max-height: 100%;
   padding: 3rem;
   background-color: rgb(105, 103, 103);
+  border: 0;
  
 }
+
+.composerBackdrop {
+    /* z-index: 1000; */
+      /* position: fixed; */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #c2a8a886;
+    }
 
 .inputWithBorderBottom {
   width: 94%;

@@ -11,7 +11,7 @@ const SignupLogin = () => {
     }
   return (
     <div className={classes.container}>
-        <h1>Welcome to Mail Box</h1>
+        <h1 style={{color: 'black'}}>Welcome to Mail Box</h1>
         <div className={classes.auth}>
             {isLogin && <LoginForm />}
             {!isLogin && <SignupForm />}
